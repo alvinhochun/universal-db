@@ -35,6 +35,14 @@
 				"3ds/Apotris/assets/",
 				"3ds/Apotris/license/",
 				"3ds/Apotris/Apotris.cia"
+			],
+			"Apotris.3dsx [update only]": [
+				"3ds/Apotris/license/",
+				"3ds/Apotris/Apotris.3dsx"
+			],
+			"Apotris.cia [update only]": [
+				"3ds/Apotris/license/",
+				"3ds/Apotris/Apotris.cia"
 			]
 		}
 	}
