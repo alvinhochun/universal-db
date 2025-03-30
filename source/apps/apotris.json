@@ -20,76 +20,22 @@
 	"updated": "2025-03-28T00:00:00Z",
 	"update_notes_md": "## v4.1.0-test (2025-03-28)\n- Test release with a native 3DS port.\n- Implemented stuff.",
 	"downloads": {
-		"Apotris (3DS)": {
+		"Apotris-v4.1.0-n3ds.zip": {
 			"url": "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0-n3ds.zip"
 		}
 	},
-	"scripts": {
-		"Apotris.3dsx + assets": [
-			{
-				"type": "downloadFile",
-				"file": "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0-n3ds.zip",
-				"output": "/_updater_Apotris.zip"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "license/",
-				"output": "sdmc:/3ds/Apotris/license/"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "Apotris.3dsx",
-				"output": "%3DSX%/Apotris/Apotris.3dsx"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "assets/",
-				"output": "sdmc:/3ds/Apotris/assets/"
-			},
-			{
-				"type": "deleteFile",
-				"file": "/_updater_Apotris.zip"
-			}
-		],
-		"Apotris.cia + assets": [
-			{
-				"type": "downloadFile",
-				"file": "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0-n3ds.zip",
-				"output": "/_updater_Apotris.zip"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "license/",
-				"output": "sdmc:/3ds/Apotris/license/"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "Apotris.cia",
-				"output": "/_updater_Apotris.cia"
-			},
-			{
-				"type": "installCia",
-				"file": "/_updater_Apotris.cia"
-			},
-			{
-				"type": "deleteFile",
-				"file": "/_updater_Apotris.cia"
-			},
-			{
-				"type": "extractFile",
-				"file": "/_updater_Apotris.zip",
-				"input": "assets/",
-				"output": "sdmc:/3ds/Apotris/assets/"
-			},
-			{
-				"type": "deleteFile",
-				"file": "/_updater_Apotris.zip"
-			}
-		]
+	"archive": {
+		"Apotris-.*3(ds|DS).*\\.zip": {
+			"Apotris.3dsx + assets": [
+				"3ds/Apotris/assets/",
+				"3ds/Apotris/license/",
+				"3ds/Apotris/Apotris.3dsx"
+			],
+			"Apotris.cia + assets": [
+				"3ds/Apotris/assets/",
+				"3ds/Apotris/license/",
+				"3ds/Apotris/Apotris.cia"
+			]
+		}
 	}
 }
